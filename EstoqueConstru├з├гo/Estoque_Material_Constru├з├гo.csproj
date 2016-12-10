@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C412A97-A1D0-4DCC-996A-69A020FAACF3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estoque_Material_Construção</RootNamespace>
+    <AssemblyName>Estoque_Material_Construção</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Estoque_Material_Construção.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlBackup.NET.2.0.9.4\lib\net45\MySqlBackup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConexaoBD.cs" />
+    <Compile Include="FRMConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMConfig.Designer.cs">
+      <DependentUpon>FRMConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMBackground.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMBackground.Designer.cs">
+      <DependentUpon>FRMBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCadastro.Designer.cs">
+      <DependentUpon>FRMCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMFornecedores.Designer.cs">
+      <DependentUpon>FRMFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMFuncionario.Designer.cs">
+      <DependentUpon>FRMFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMLogin.Designer.cs">
+      <DependentUpon>FRMLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMOrcamento.Designer.cs">
+      <DependentUpon>FRMOrcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMPedidoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMPedidoProduto.Designer.cs">
+      <DependentUpon>FRMPedidoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMAvisaEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMAvisaEstoque.Designer.cs">
+      <DependentUpon>FRMAvisaEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMPrincipal.Designer.cs">
+      <DependentUpon>FRMPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMProduto.Designer.cs">
+      <DependentUpon>FRMProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMRelatorio.Designer.cs">
+      <DependentUpon>FRMRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMVendas.Designer.cs">
+      <DependentUpon>FRMVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Variaveis.cs" />
+    <EmbeddedResource Include="FRMConfig.resx">
+      <DependentUpon>FRMConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMBackground.resx">
+      <DependentUpon>FRMBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCadastro.resx">
+      <DependentUpon>FRMCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMFornecedores.resx">
+      <DependentUpon>FRMFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMFuncionario.resx">
+      <DependentUpon>FRMFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMLogin.resx">
+      <DependentUpon>FRMLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMOrcamento.resx">
+      <DependentUpon>FRMOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMPedidoProduto.resx">
+      <DependentUpon>FRMPedidoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMAvisaEstoque.resx">
+      <DependentUpon>FRMAvisaEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMPrincipal.pt-BR.resx">
+      <DependentUpon>FRMPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMPrincipal.resx">
+      <DependentUpon>FRMPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMProduto.resx">
+      <DependentUpon>FRMProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMRelatorio.resx">
+      <DependentUpon>FRMRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMVendas.resx">
+      <DependentUpon>FRMVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+    <None Include="Resources\ic_add_black_18dp_1x.png" />
+    <None Include="Resources\ic_add_a_photo_black_24dp_2x.png" />
+    <None Include="Resources\ic_add_black_18dp_2x.png" />
+    <None Include="Resources\ic_assignment_black_36dp_1x.png" />
+    <None Include="Resources\ic_compare_arrows_black_18dp_2x.png" />
+    <Content Include="Resources\ic_delete_black_18dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_exit_to_app_black_18dp_2x.png" />
+    <None Include="Resources\ic_keyboard_return_black_18dp_2x.png" />
+    <Content Include="Resources\ic_local_convenience_store_black_36dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_local_printshop_black_18dp_2x.png" />
+    <Content Include="Resources\ic_person_add_black_36dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_local_parking_black_36dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_save_black_18dp_2x.png" />
+    <None Include="Resources\ic_search_black_18dp_1x.png" />
+    <None Include="Resources\ic_shopping_basket_black_36dp_1x.png" />
+    <Content Include="Resources\ic_shopping_cart_black_36dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_receipt_black_36dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_pie_chart_black_36dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_build_black_36dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_power_settings_new_black_36dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_restore_page_black_18dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_search_black_18dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_check_circle_black_18dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_priority_high_black_18dp_1x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_visibility_black_18dp_1x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_visibility_off_black_18dp_1x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ic_power_settings_new_black_18dp_2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="pt-BR\Estoque_Material_Construção.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
